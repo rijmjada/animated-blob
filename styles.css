@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #250821;
+}
+
+.blob {
+    position: absolute;
+    width: 30em;
+    height: 30em;
+}
+
+.blob:nth-child(2) {
+    filter: blur(5em);
+    animation: mover-fondo 10s ease-in-out infinite;
+}
+
+@keyframes mover-fondo {
+
+    0% {
+
+        filter: blur(5em)
+    }
+
+    33% {
+
+        background-color: rgb(8, 154, 221);
+        filter: blur(15em)
+    }
+
+    66% {
+        background-color: rgb(70, 6, 188);
+        filter: blur(1em);
+        border-radius: 20em;
+    }
+
+
+
+    100% {
+        filter: blur(5em)
+    }
+
+}
